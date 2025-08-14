@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        // Input the number of elements
         System.out.println("Insert the number of elements: ");
         int n = sc.nextInt();
         int[] arr = new int[n];
@@ -15,9 +16,9 @@ public class Main {
         showArray(arr,sc,n);
         sc.close();
 
-
     }
 
+    // Insert elements in the array using recursion
     public static int[] fillArray(int[] arr, Scanner sc,int n) {
         if(n <= 0){
             return arr;
@@ -29,6 +30,7 @@ public class Main {
 
     }
 
+    // Show elements of the array using recursion
     public static void showArray(int[] arr,Scanner sc,int n) {
         if(arr.length >= 0){
             return;
