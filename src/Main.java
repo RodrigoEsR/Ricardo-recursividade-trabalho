@@ -27,11 +27,11 @@ public class Main {
     }
 
     // Show elements of the array using recursion
-    public static int showArray(int[] arr,Scanner sc,int n) {
-        if(arr.length >= 0){
+    public static int showArray(int[] arr,Scanner sc,int array) {
+        if(array >= 0){
             return 0;
         }
-        System.out.println(arr[n]);
-        return showArray(arr,sc,n-1);
+        System.out.println(arr[array]);
+        return showArray(arr,sc,array-1);
     }
 }
