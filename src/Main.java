@@ -9,10 +9,7 @@ public class Main {
         int[] arr = new int[n];
 
         arr = fillArray(arr,sc, n);
-        System.out.println(arr[0]);
-        System.out.println(arr[1]);
-        System.out.println(arr[2]);
-        showArray(arr,sc,n);
+        showArray(arr,sc,n-1);
         sc.close();
 
 
@@ -23,17 +20,16 @@ public class Main {
             return arr;
         }
         System.out.println("Insert the element: ");
-        int element = sc.nextInt();
-        arr[n-1] = element;
+        arr[n-1] = sc.nextInt();
         return fillArray(arr,sc,n-1);
 
     }
 
-    public static void showArray(int[] arr,Scanner sc,int n) {
-        if(arr.length >= 0){
-            return;
+    public static int showArray(int[] arr,Scanner sc,int n) {
+        if(n >= 1){
+            return arr[0];
         }
-        System.out.println(arr[n-1]);
-        showArray(arr,sc,n-1);
+        System.out.println(arr[n]);
+        return showArray(arr,sc,n-1);
     }
 }
