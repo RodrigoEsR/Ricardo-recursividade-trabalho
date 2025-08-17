@@ -10,7 +10,7 @@ public class Main {
         int[] arr = new int[n];
 
         arr = fillArray(arr,sc, n);
-        showArray(arr,sc,n-1);
+        showArray(arr,n-1);
         sc.close();
 
     }
@@ -20,18 +20,18 @@ public class Main {
         if(n <= 0){
             return arr;
         }
-        System.out.printf("Insert the element: (Remaining: %d)", n);
+        System.out.printf("Insert the element: (Remaining: %d) ", n);
         arr[n-1] = sc.nextInt();
         return fillArray(arr,sc,n-1);
 
     }
 
     // Show elements of the array using recursion
-    public static int showArray(int[] arr,Scanner sc,int array) {
+    public static int showArray(int[] arr, int array) {
         if(array < 0){ // Stop when hit 0
             return 0;
         }
         System.out.println(arr[array]);
-        return showArray(arr,sc,array-1);
+        return showArray(arr,array-1);
     }
 }
